@@ -11,7 +11,7 @@
         .user-card:last-child { border-bottom: none; }
         
         /* Bug 1: El botón no toma los estilos por un error tipográfico */
-        .btn-primery { 
+        .btn-primary { 
             background-color: #0056b3; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 20px;
         }
     </style>
@@ -43,7 +43,7 @@
                     div.className = 'user-card';
                     
                     // Bug 2: Los datos no se muestran correctamente. Revisa las propiedades del objeto 'user'.
-                    div.innerHTML = `<strong>${user.full_name}</strong> - ${user.email_address}`; 
+                    div.innerHTML = `<strong>${user.name}</strong> - ${user.email}`; 
                     
                     userList.appendChild(div);
                 });
