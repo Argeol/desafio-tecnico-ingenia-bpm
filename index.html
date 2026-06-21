@@ -29,6 +29,17 @@
     // Tarea 3 (Lógica SQL): Corrige esta consulta para insertar un usuario.
     // Consulta actual: INSERT INTO estudiantes (nombre, correo) VALUES (userName);
     // Tu corrección: 
+    // Corrección 1 (Recomendada - Consulta parametrizada, evita SQL Injection):
+    // INSERT INTO estudiantes (nombre, correo)
+    // VALUES (@userName, @email);
+
+    // Corrección 2 (Consulta Preparada):
+    // INSERT INTO estudiantes (nombre, correo)
+    // VALUES (?, ?);
+
+    // Corrección 3 (SQL puro con valores literales:
+    // INSERT INTO estudiantes (nombre, correo)
+    // VALUES ('Juan Pérez', 'juan@email.com');
 
     function loadUsers() {
         const userList = document.getElementById('userList');
